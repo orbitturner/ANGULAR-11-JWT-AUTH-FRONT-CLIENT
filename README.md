@@ -18,18 +18,18 @@
 * ❤ 🔹 💚 ENJOY IT 💚 - 💚 SHARE IT 💚 - 💚 USE IT💚 🔹 ❤
 */
 </pre>
-🔻===============================================================================================🔻
-Project Name            :   ANGULAR-11-JWT-AUTHENTICATION-FRONT
+🔻==========================================================🔻
+Project Name            :   ANGULAR-11-JWT-AUTHENTICATION-FRONT<br/>
 Project Description     :   A DemoProject for presenting my way of managing jwt auth in the front with 
-                               angular using GUARDS / INTERCEPTORS / LOCALSTORAGE / ANGULAR-JWT2
-Project Developer       :   @OrbitTurner : https://orbitturner.com
-Project Main Language   :   TYPESCRIPT - ANGULAR 11
-Project Start Date      :   04/01/2021
-Project Type            :   Web Application / SAAS
-Project License         :   💚 GNU ✔ ITS FREE and OPEN just credit me.
-Project Inspired From   :   MOHAMED YOUSSFI - ANGULAR ACADEMY - BEZCODER
-Project Repository      :   https://github.com/orbitturner/ANGULAR-11-JWT-AUTH-FRONT-CLIENT
-🔻===============================================================================================🔻
+                               angular using GUARDS / INTERCEPTORS / LOCALSTORAGE / ANGULAR-JWT2<br/>
+Project Developer       :   @OrbitTurner : https://orbitturner.com<br/>
+Project Main Language   :   TYPESCRIPT - ANGULAR 11<br/>
+Project Start Date      :   04/01/2021<br/>
+Project Type            :   Web Application / SAAS<br/>
+Project License         :   💚 GNU ✔ ITS FREE and OPEN just credit me.<br/>
+Project Inspired From   :   MOHAMED YOUSSFI - ANGULAR ACADEMY - BEZCODER<br/>
+Project Repository      :   https://github.com/orbitturner/ANGULAR-11-JWT-AUTH-FRONT-CLIENT<br/>
+🔻==========================================================🔻
 
 --------------------------------------------------------------------------
 #IF YOU DOWNLOAD THE PROJECT IT CAN HAVING PROBLEM WORKING BECAUSE IT WAS MADE JUST TO DEMONSTRATE HOW TO SETUP THESE FOLLOWING :

@@ -34,7 +34,7 @@
 
 --------------------------------------------------------------------------
 #IF YOU DOWNLOAD THE PROJECT IT CAN HAVING PROBLEM WORKING BECAUSE IT WAS MADE JUST TO DEMONSTRATE HOW TO SETUP THESE FOLLOWING :
-🔻=====================🔻
+<br/>🔻=====================🔻
 -  AUTH.INTERCEPTOR.TS
 -  AUTH.SERVICE.TS
 -  LOGIN.COMPONENT.TS

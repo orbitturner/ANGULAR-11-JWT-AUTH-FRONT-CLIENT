@@ -29,6 +29,7 @@
 >Project License         :   💚 GNU ✔ ITS FREE and OPEN just credit me.<br/>
 >Project Inspired From   :   MOHAMED YOUSSFI - ANGULAR ACADEMY - BEZCODER<br/>
 >Project Repository      :   https://github.com/orbitturner/ANGULAR-11-JWT-AUTH-FRONT-CLIENT<br/>
+<br/>
 🔻==========================================================🔻
 
 --------------------------------------------------------------------------

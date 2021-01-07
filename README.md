@@ -1,6 +1,37 @@
 # Angular 11 JWT Authentication example
-
+<pre>
+/* === 🌌 WELCOME TO ORBIT CODE SPACESHIP 🌌  ===
+*   
+*	  Project :                   
+*	  By :
+*
+*     ██████╗ ██████╗ ██████╗ ██╗████████╗    ████████╗██╗   ██╗██████╗ ███╗   ██╗███████╗██████╗ 
+*    ██╔═══██╗██╔══██╗██╔══██╗██║╚══██╔══╝    ╚══██╔══╝██║   ██║██╔══██╗████╗  ██║██╔════╝██╔══██╗
+*    ██║   ██║██████╔╝██████╔╝██║   ██║          ██║   ██║   ██║██████╔╝██╔██╗ ██║█████╗  ██████╔╝
+*    ██║   ██║██╔══██╗██╔══██╗██║   ██║          ██║   ██║   ██║██╔══██╗██║╚██╗██║██╔══╝  ██╔══██╗
+*    ╚██████╔╝██║  ██║██████╔╝██║   ██║          ██║   ╚██████╔╝██║  ██║██║ ╚████║███████╗██║  ██║
+*     ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝   ╚═╝          ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
+*          
+*  AUTHOR : MOHAMED GUEYE [Orbit Turner] - Linkedin: www.linkedin.com/in/orbitturner - Email: orbitturner@orbitturner.com - Country: Senegal
+*                              GITHUB : Orbit Turner    -   Website: http://orbitturner.com/ 
+*
+*🔻===============================================================================================🔻
+*	  Project Name 			      :   ANGULAR-11-JWT-AUTHENTICATION-FRONT
+*	  Project Description		  :   A DemoProject for presenting my way of managing jwt auth in the front with 
+*                               angular using GUARDS / INTERCEPTORS / LOCALSTORAGE / ANGULAR-JWT2
+*   Project Developer		    :   @OrbitTurner : https://orbitturner.com
+* 	Project Main Language	  :   TYPESCRIPT - ANGULAR 11
+* 	Project Start Date		  :   04/01/2021
+* 	Project Type			      :   Web Application / SAAS
+*	  Project License		    	:   💚 GNU ✔ ITS FREE and OPEN just credit me.
+*   Project Inspired From   :   MOHAMED YOUSSFI - ANGULAR ACADEMY - BEZCODER
+* 	Project Repository	  	:   https://github.com/orbitturner/ANGULAR-11-JWT-AUTH-FRONT-CLIENT
+*🔻===============================================================================================🔻
+* ❤ 🔹 💚 ENJOY IT 💚 - 💚 SHARE IT 💚 - 💚 USE IT💚 🔹 ❤
+*/
+</pre>
 #IF YOU DOWNLOAD THE PROJECT IT CAN HAVING PROBLEM WORKING BECAUSE IT WAS MADE JUST TO DEMONSTRATE HOW TO SETUP THESE FOLLOWING :
+🔻=====================🔻
 -  AUTH.INTERCEPTOR.TS
 -  AUTH.SERVICE.TS
 -  LOGIN.COMPONENT.TS

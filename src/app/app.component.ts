@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenStorageService } from './_services/token-storage.service';
+import { AuthService } from './_services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,30 +7,32 @@ import { TokenStorageService } from './_services/token-storage.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  private roles: string[] = [];
+  private roles: string | null = '';
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
   username?: string;
 
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.isLoggedIn = !!this.tokenStorageService.getToken();
+    this.isLoggedIn = !!this.authService.getToken();
 
     if (this.isLoggedIn) {
-      const user = this.tokenStorageService.getUser();
-      this.roles = user.roles;
+      const user = this.authService.getUser();
+      this.roles = this.authService.getUserRole();
 
-      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      // this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      // this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      this.showAdminBoard = this.roles === 'ADMIN';
+      this.showModeratorBoard = this.roles === 'MODERATOR';
 
-      this.username = user.username;
+      this.username = user as string;
     }
   }
 
   logout(): void {
-    this.tokenStorageService.signOut();
+    this.authService.signOut();
     window.location.reload();
   }
 }

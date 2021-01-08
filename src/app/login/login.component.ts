@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
-import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -29,15 +28,19 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     const user = this.form;
 
-    if (this.authService.login(user)){
-      this.isLoginFailed = false;
-      this.isLoggedIn = true;
-      this.roles = this.authService.getUserRole();
-      this.reloadPage();
-    }else{
-      this.errorMessage = "USER CREDS INCORRECT";
-        this.isLoginFailed = true;
-    }
+    this.authService.login(user).then(
+      (loginState) => {
+        if (loginState){
+          this.isLoginFailed = false;
+          this.isLoggedIn = true;
+          this.roles = this.authService.getUserRole();
+          this.reloadPage();
+        }else{
+          this.errorMessage = "USER CREDS INCORRECT";
+          this.isLoginFailed = true;
+        }
+      },
+    );
   }
 
   reloadPage(): void {

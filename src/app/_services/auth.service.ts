@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {config} from '../config/api.config';
 import {JwtHelper} from 'angular2-jwt';
+import {tap} from 'rxjs/operators';
 
 
 // =============' KEY IN LOCALSTORAGE '==============
@@ -20,6 +21,8 @@ export class AuthService {
   // =================================================
   private jwtHelper = new JwtHelper();
   // =================================================
+  // private state = false;
+  // =================================================
 
 
   constructor(private http: HttpClient) {
@@ -31,14 +34,12 @@ export class AuthService {
    *
    * @param user
    */
-  login(user: { email: string, password: string }): boolean {
-    let state: boolean;
-    state = false;
-
-    this.http.post<any>(`${config.apiBaseUrl}/login`, user, {observe: 'response'})
-      .subscribe(
+  // tslint:disable-next-line:typedef
+  async login(user: { email: string, password: string }) {
+    return await new Promise(((resolve, reject) => {
+      this.http.post<any>(`${config.apiBaseUrl}/login`, user, {observe: 'response'}).subscribe(
         data => {
-          const token = <string> data.headers.get('authorization');
+          const token = data.headers.get('authorization') as string;
           // TODO : REMOVE THESE
           // console.log(this.jwtHelper.decodeToken(token).sub);
           // console.log(this.jwtHelper.decodeToken(token).roles[0]);
@@ -46,18 +47,16 @@ export class AuthService {
           if (token){
             this.saveToken(token);
             this.saveUser(token);
+
+            resolve(true);
           }
-          state = true;
         },
-      err => {
-        console.log(err.error.message);
-        state = false;
-      }
-    );
-    console.log(
-      state
-    );
-    return state;
+        err => {
+          console.log('User Not Found');
+          resolve(false);
+        }
+      );
+    }));
   }
 
   /**
@@ -95,8 +94,12 @@ export class AuthService {
    */
   signOut(): void {
     localStorage.clear();
+    this.reloadPage();
   }
 
+  private reloadPage(): void {
+    window.location.reload();
+  }
   /**
    * Saves The Actual User JWT-Token to The LocalStorage
    *
@@ -132,7 +135,9 @@ export class AuthService {
      * If you got many roles for one user you need to replace this under line by this commented one :
      * localStorage.setItem(ROLES_KEY, this.jwtHelper.decodeToken(token).roles[0]);
      */
-    localStorage.setItem(ROLES_KEY, this.jwtHelper.decodeToken(token).roles);
+    localStorage.setItem(ROLES_KEY, this.jwtHelper.decodeToken(token).roles[0].authority);
+
+
   }
 
   /**
@@ -151,10 +156,10 @@ export class AuthService {
    * Get The Role of the connected User Stored in LocalStorage
    * ¤ If Exist
    */
-  getUserRole(): string | null {
+  public getUserRole(): string | null {
     const role = localStorage.getItem(ROLES_KEY);
     if (role){
-      return role[0];
+      return role;
     }
     return null;
   }

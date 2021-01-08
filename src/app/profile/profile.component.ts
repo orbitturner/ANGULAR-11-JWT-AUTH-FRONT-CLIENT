@@ -8,10 +8,14 @@ import { AuthService } from '../_services/auth.service';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
+  userToken: any;
+  userRole: any;
 
   constructor(private token: AuthService) { }
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
+    this.userToken = this.token.getToken();
+    this.userRole = this.token.getUserRole();
   }
 }

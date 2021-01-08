@@ -15,7 +15,7 @@ export class UserService {
   }
 
   getUserBoard(): Observable<any> {
-    return this.http.get(`${config.apiBaseUrl}/user`, { responseType: 'text' });
+    return this.http.get(`${config.apiBaseUrl}/api/orienta/formations`, { responseType: 'text' });
   }
 
   getModeratorBoard(): Observable<any> {

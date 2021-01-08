@@ -46,6 +46,9 @@
 ## PRE-REQUISITE
 - ANGULAR-JWT2 ["angular2-jwt": "^0.2.3"]
 - A BACKEND API APP ON SPRING BOOT WITH JWT CONFIGURED IN SPRING SECURITY
+- IF U HAVE PROBLEM WITH ANGULAR-JWT2 REPLACE THE LINE 88 IN (ANGULAR2-JWT.D.TS) WITH THIS:
+> static forRoot(config: AuthConfig): ModuleWithProviders<any>;
+
 
 ## Flow for User Registration and User Login
 For JWT – Token based Authentication with Web API, we’re gonna call 2 endpoints:
